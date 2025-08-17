@@ -33,7 +33,7 @@ public class Numbers {
 
 
 
-    public stati`c void main(String [] args){
+    public static void main(String [] args){
 
         // q1
         System.out.println(evenFn(Arrays.asList(1,2,3,4))); // question is what does it print?
