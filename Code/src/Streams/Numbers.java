@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-
+// more streams here: https://github.com/golansha/streamExamples/tree/master/src/main/java/streamsExamples
+// the following are from old exams and tests
 public class Numbers {
 
     public static int evenFn(List<Integer> numbers){
 
-
-        numbers.stream().map(x->x*2); // does nothing
+        numbers.stream().map(x->x*2); //map does nothing here
 
         return numbers.stream()
                 .filter(x->x%2==0) // only keep evens
@@ -23,14 +23,11 @@ public class Numbers {
 
     public static List<Integer> orderedAsc(List<Integer> numbers){
         return numbers.stream().sorted().collect(Collectors.toList());
-        // with comparator:
 
     }
     public static List<Integer> orderedDesc(List<Integer> numbers){
         return numbers.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-
     }
-
 
 
     public static void main(String [] args){
@@ -38,7 +35,7 @@ public class Numbers {
         // q1
         System.out.println(evenFn(Arrays.asList(1,2,3,4))); // question is what does it print?
 
-        //q2 fill in blanks of sqare and ordered functions in 1 line using streams
+        //q2 fill in blanks of square and ordered functions in 1 line using streams
         List<Integer> numbers = Arrays.asList(2,4,3,5);
         System.out.println("Squares of numbers: ");
         System.out.println(square(numbers)); // should print [4, 16, 9, 25]
